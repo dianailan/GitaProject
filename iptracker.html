@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>IP Adress Tracker</title>
+    
+    <!-- Leaflet CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+</head>
+
+<body>
+    <div class="serachIP-container">
+        <div class="text-container">
+            <p class="text">IP Address Tracker</p>
+        </div>
+        <div class="inp-and-btn-container">
+            <input id="ipInput" class="ip-input" onchange="checkIpValidity(this.value)" type="text" placeholder="Search for any IP addresses">
+            <button class="submit-btn" onclick="getIp()"><img src="./images/icon-arrow.svg" alt=""></button>
+        </div>
+    </div>
+    <div id="map"></div>
+    <div class="info-display">
+        <div class="info-specific">
+            <p class="title">IP ADDRESS</p>
+            <p class="info" id="ip"></p>
+        </div>
+        <span class="line"></span>
+        <div class="info-specific">
+            <p class="title">LOCATION</p>
+            <p class="info" id="location">Tbilisi, GE</p>
+        </div>
+        <span class="line"></span>
+        <div class="info-specific">
+            <p class="title">TIMEZONE</p>
+            <p class="info" id="timezone">+04:00</p>
+        </div>
+        <span class="line"></span>
+        <div class="info-specific">
+            <p class="title">ISP</p>
+            <p class="info" id="isp">JSC "Silknet"</p>
+        </div>
+    </div>
+
+    <!-- Leaflet JS CDN -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+
+    <!--JQuery CDN-->
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./iptracker.js"></script>
+</body>
+</html>
