@@ -1,0 +1,42 @@
+body {
+    background: linear-gradient(270deg, #2f3dff8e, #008cff, #6200ffe2, #bb00c5d7);
+    background-size: 800% 800%;
+    animation: gradient 55s ease infinite;
+}
+.pages{
+    display: flex;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+}
+.weather{
+    height: 100vh;
+}
+.page-container{
+    width: 350px;
+    height: 280px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 41px -9px rgba(0, 0, 0, 0.255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: hsl(0, 0%, 17%);
+    background: url('../images/pattern-bg.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-color: rgba(255, 255, 255, 0.203);
+}
+.page-container:hover{
+    cursor: pointer;
+}
+.pages a{
+    text-decoration: none;
+}
+@keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/ip-and-weather-shared.css">
+    <link rel="stylesheet" href="../styles/weather.css">
+
+    <link rel="icon" href="../images/icons8-rain-cloud-48.png" type="image/png">
+
+</head>
+<body>
+    <header class="header">
+        <a href="../home/index.html">HOME</a>
+        <a href="../IPTracker/iptracker.html">IP Address Tracker</a>
+    </header>
+    <div class="weather">
+        <div class="search-container">
+            <div class="text-container">
+                <p class="text">Search City Weather</p>
+            </div>
+            <div class="inp-and-btn-container">
+                <input id="cityInput" class="ip-input" onkeydown="inputValue(this.value)" type="text" placeholder="Search for any City">
+                <button class="submit-btn" onclick="getCityWeather()"><img src="../images/icon-arrow.svg" alt=""></button>
+                <p class="error-message"></p>
+            </div>
+        </div> 
+        <div class="weather-info-display">
+            <div class="city"></div>
+            <div class="temperature">
+                <div class="weather-icon-and-desc">
+                    <div class="icon"><img id="wicon" src="" alt=""></div>
+                    <div class="degree-and-icon">
+                        <div class="degree"></div>
+                    </div>
+                    <p class="weather-description"></p>
+                </div>
+            </div>
+            <div class="addit-weather-info">
+                <div class="addit-info">
+                    <p class="low-high">hi</p>
+                    <p>low  high</p>
+                </div>
+                <div class="addit-info">
+                    <p class="feels-like"></p>
+                    <p>feels like</p>
+                </div>
+                <div class="addit-info">
+                    <p class="humidity"></p>
+                    <p>humidity</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Leaflet JS CDN -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./weather.js"></script>
+</body>
+</html>

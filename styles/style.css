@@ -1,12 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');body{
-    font-family: 'Roboto', sans-serif;
-
-}
 /* Search IP Part */
 .serachIP-container {
-    background-image:url('../images/pattern-bg.png');
-    background-repeat:no-repeat;
-    background-size:cover;
+    background: linear-gradient(270deg, #2f3dff8e, #008cff, #6200ffe2, #bb00c5d7);
+    background-size: 800% 800%;
+    animation: gradient 55s ease infinite;
     height: 250px;
     display: flex;
     align-items: center;
@@ -15,6 +11,7 @@
     gap: 20px;
     box-sizing: border-box;
     padding-bottom: 65px;
+    padding-top: 50px;
 }
 .ip-input { 
     width: 475px;
@@ -59,7 +56,7 @@
 #map { 
     height:100vh;
     position: absolute;
-    height: 68%;
+    height: 70%;
     width: 100%;
     z-index: 0;
 }
@@ -72,7 +69,7 @@
     background-color: white;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -140%);
+    transform: translate(-50%, -127%);
     border-radius: 16px;
     filter: drop-shadow(0 17px 16px rgba(83, 83, 83, 0.285));
     display: flex;
@@ -96,10 +93,16 @@
 .info{
     font-size: 21px;
     font-weight: bold;
-    color: hsl(0, 0%, 17%);;
+    color: hsl(0, 0%, 17%);
 }
 .line{
     width: 2px;
     height: 85px;
     background-color: rgba(128, 128, 128, 0.171);
+}
+
+@keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }

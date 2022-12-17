@@ -1,0 +1,55 @@
+.weather{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.weather-info-display{
+    width: 620px;
+    height: 350px;
+    background-color: #ffffff69;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 30px 35px;
+}
+.degree{
+    font-size: 50px;
+    color: white;
+}
+.temperature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 44px;
+}
+.degree-and-icon{
+    position: relative;
+}
+.city{
+    font-size: 40px;
+    color: white;
+}
+.weather-description{
+    color: white;
+    text-transform: capitalize;
+    line-height: 25px;
+    margin-left: 28px;
+}
+.weather-icon-and-desc{
+    display: flex;
+    width: 290px;
+    justify-content: center;
+    align-items: center;
+    margin-left: -25px;
+}
+.addit-weather-info{
+    display: flex;
+    gap: 70px;
+    color: white;
+    justify-content: space-evenly;
+}
+.addit-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
